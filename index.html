@@ -1,0 +1,205 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SR Tools for Revit</title>
+<meta name="description" content="SR Tools – productivity add-ins for Autodesk Revit 2021–2027 by Satheesh Rajendran.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#ffffff; --bg-soft:#f4f6f9; --ink:#14181f; --muted:#5b6473; --line:#e2e6ec;
+    --brand:#0b6bcb; --brand-ink:#ffffff; --card:#ffffff;
+  }
+  @media (prefers-color-scheme: dark){
+    :root{ --bg:#0f1318; --bg-soft:#161b22; --ink:#e8ecf2; --muted:#9aa4b2; --line:#262d37;
+           --brand:#3d8ff0; --brand-ink:#ffffff; --card:#161b22; }
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;font-family:Inter,Segoe UI,Arial,sans-serif;background:var(--bg);color:var(--ink);line-height:1.6}
+  a{color:var(--brand)}
+  .wrap{max-width:1080px;margin:0 auto;padding:0 20px}
+
+  header{position:sticky;top:0;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(8px);border-bottom:1px solid var(--line);z-index:10}
+  .nav{display:flex;align-items:center;justify-content:space-between;height:60px}
+  .logo{display:flex;align-items:center;gap:10px;font-weight:700;font-size:18px;color:var(--ink);text-decoration:none}
+  .mark{width:30px;height:30px;border-radius:7px;background:var(--brand);color:var(--brand-ink);display:grid;place-items:center;font-size:13px;font-weight:700}
+  nav a{color:var(--muted);text-decoration:none;margin-left:22px;font-size:15px}
+  nav a:hover{color:var(--ink)}
+  @media (max-width:640px){ nav a:not(.keep){display:none} }
+
+  .hero{padding:80px 0 64px;border-bottom:1px solid var(--line)}
+  .hero h1{font-size:clamp(32px,5vw,52px);line-height:1.1;margin:0 0 16px;letter-spacing:-.02em}
+  .hero p{font-size:19px;color:var(--muted);max-width:640px;margin:0 0 28px}
+  .btns{display:flex;flex-wrap:wrap;gap:12px}
+  .btn{display:inline-block;padding:12px 20px;border-radius:8px;font-weight:600;text-decoration:none;font-size:15px}
+  .btn.primary{background:var(--brand);color:var(--brand-ink)}
+  .btn.ghost{border:1px solid var(--line);color:var(--ink)}
+  .badges{margin-top:28px;display:flex;flex-wrap:wrap;gap:8px}
+  .badge{font-size:13px;padding:4px 10px;border-radius:99px;background:var(--bg-soft);color:var(--muted);border:1px solid var(--line)}
+
+  section{padding:64px 0;border-bottom:1px solid var(--line)}
+  h2{font-size:28px;margin:0 0 8px;letter-spacing:-.01em}
+  .lead{color:var(--muted);margin:0 0 32px}
+
+  .group{margin-bottom:32px}
+  .group h3{font-size:14px;text-transform:uppercase;letter-spacing:.06em;color:var(--muted);margin:0 0 12px}
+  .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:14px}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:16px 18px}
+  .card b{display:block;margin-bottom:4px}
+  .card span{color:var(--muted);font-size:14px}
+
+  .steps{counter-reset:s;display:grid;gap:14px;max-width:720px}
+  .step{display:flex;gap:14px;align-items:flex-start}
+  .step::before{counter-increment:s;content:counter(s);flex:none;width:28px;height:28px;border-radius:50%;background:var(--brand);color:var(--brand-ink);display:grid;place-items:center;font-weight:600;font-size:14px}
+
+  table{border-collapse:collapse;width:100%;max-width:720px;font-size:15px}
+  th,td{text-align:left;padding:10px 12px;border-bottom:1px solid var(--line)}
+  th{color:var(--muted);font-weight:500}
+
+  .privacy p,.privacy li{color:var(--muted);max-width:760px}
+  footer{padding:32px 0;color:var(--muted);font-size:14px}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <a class="logo" href="#"><span class="mark">SR</span> SR Tools</a>
+    <nav>
+      <a href="#tools">Tools</a>
+      <a href="#install">Install</a>
+      <a href="#support" class="keep">Support</a>
+      <a href="#privacy">Privacy</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <div class="hero">
+    <div class="wrap">
+      <h1>Revit tools that cut the repetitive work.</h1>
+      <p>SR Tools is a set of add-ins for Autodesk Revit, built from real BIM coordination work — parameters, model cleanup, MEP spaces, exports, Excel links and more, all on one ribbon tab.</p>
+      <div class="btns">
+        <!-- Replace both links once they exist -->
+        <a class="btn primary" href="https://github.com/SatheeshAPI/srtools/releases/latest">Download latest</a>
+        <a class="btn ghost" href="https://marketplace.autodesk.com/">Autodesk Marketplace</a>
+      </div>
+      <div class="badges">
+        <span class="badge">Revit 2021 – 2027</span>
+        <span class="badge">Windows 64-bit</span>
+        <span class="badge">Version 1.0.9</span>
+      </div>
+    </div>
+  </div>
+
+  <section id="tools">
+    <div class="wrap">
+      <h2>Tools</h2>
+      <p class="lead">Everything appears on the <b>Tools</b> tab in Revit after installing.</p>
+
+      <div class="group">
+        <h3>Parameters &amp; data</h3>
+        <div class="grid">
+          <div class="card"><b>ParaManager</b><span>Create, bind, import/export and map shared parameters.</span></div>
+          <div class="card"><b>AIR Parameters</b><span>Add and fill AIR parameter sets.</span></div>
+          <div class="card"><b>OmniClass Fill</b><span>Fill OmniClass classification data.</span></div>
+          <div class="card"><b>Coordinates</b><span>Fill Easting / Northing by discipline, schedule and category.</span></div>
+        </div>
+      </div>
+
+      <div class="group">
+        <h3>Model management</h3>
+        <div class="grid">
+          <div class="card"><b>Model Cleaning</b><span>Remove unused parameters and other clutter.</span></div>
+          <div class="card"><b>Batch Upgrade</b><span>Upgrade folders of older models with an issue report per model.</span></div>
+          <div class="card"><b>Link Manager</b><span>Manage links and their worksets.</span></div>
+          <div class="card"><b>Lock Manager</b><span>Lock and unlock elements in bulk.</span></div>
+          <div class="card"><b>Host Remover</b><span>Detach elements from their hosts.</span></div>
+          <div class="card"><b>Family Manager</b><span>Browse and load families.</span></div>
+        </div>
+      </div>
+
+      <div class="group">
+        <h3>MEP &amp; modelling</h3>
+        <div class="grid">
+          <div class="card"><b>Create Spaces</b><span>MEP Spaces from Rooms in a linked model.</span></div>
+          <div class="card"><b>Equipment Tag</b><span>Tag equipment quickly and consistently.</span></div>
+          <div class="card"><b>CAD to Revit</b><span>Turn CAD geometry into Revit elements.</span></div>
+          <div class="card"><b>Wire to Line</b><span>Convert wires to lines.</span></div>
+        </div>
+      </div>
+
+      <div class="group">
+        <h3>Views, sheets &amp; output</h3>
+        <div class="grid">
+          <div class="card"><b>Auto View Templates</b><span>Create and apply view templates.</span></div>
+          <div class="card"><b>Template Matrix</b><span>See and edit view template settings in one grid.</span></div>
+          <div class="card"><b>Numbering</b><span>Number elements in sequence.</span></div>
+          <div class="card"><b>Rename Manager</b><span>Rename views, sheets and more in bulk.</span></div>
+          <div class="card"><b>Export Manager</b><span>Batch PDF and DWG export.</span></div>
+          <div class="card"><b>Quantity Takeoff</b><span>Quantity reports from the model.</span></div>
+        </div>
+      </div>
+
+      <div class="group">
+        <h3>Excel</h3>
+        <div class="grid">
+          <div class="card"><b>Excel Import / Export</b><span>Move element data between Revit and Excel.</span></div>
+          <div class="card"><b>Excel to Schedule</b><span>Build schedules from Excel.</span></div>
+          <div class="card"><b>Excel to Drafting</b><span>Place Excel tables on drafting views.</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="install">
+    <div class="wrap">
+      <h2>Install</h2>
+      <p class="lead">No admin rights needed.</p>
+      <div class="steps">
+        <div class="step"><div>Close Revit.</div></div>
+        <div class="step"><div>Run <b>SRTools_Revit_Setup_1.0.9.exe</b> — it installs the right build for each Revit version you have.</div></div>
+        <div class="step"><div>Start Revit, open the <b>Tools</b> tab and click <b>Account</b> to sign in.</div></div>
+      </div>
+      <br>
+      <table>
+        <tr><th>Revit</th><th>Supported</th></tr>
+        <tr><td>2021 – 2024</td><td>Yes</td></tr>
+        <tr><td>2025, 2026</td><td>Yes, all updates</td></tr>
+        <tr><td>2027</td><td>Yes</td></tr>
+      </table>
+    </div>
+  </section>
+
+  <section id="support">
+    <div class="wrap">
+      <h2>Support</h2>
+      <p class="lead">Found a problem or have an idea for a tool?</p>
+      <p>Email <a href="mailto:Satheeshfromsiva@gmail.com">Satheeshfromsiva@gmail.com</a>. Please include your Revit version and SR Tools version.</p>
+      <p>To uninstall, use <i>Windows Settings › Apps</i>.</p>
+    </div>
+  </section>
+
+  <section id="privacy" class="privacy">
+    <div class="wrap">
+      <h2>Privacy</h2>
+      <p>SR Tools needs a sign-in so each licence is used on one computer. To do that, it stores and sends:</p>
+      <ul>
+        <li>your SR Tools account name and email,</li>
+        <li>your computer name and Windows user name,</li>
+        <li>your Revit and SR Tools version numbers.</li>
+      </ul>
+      <p>This is used only to check your licence, deliver updates and give support. It is not sold or shared. Your Revit models and project data never leave your computer. To have your data deleted, email the support address above.</p>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">© 2026 SR Tools · Satheesh Rajendran. Autodesk and Revit are trademarks of Autodesk, Inc. SR Tools is not affiliated with Autodesk.</div>
+</footer>
+
+</body>
+</html>
